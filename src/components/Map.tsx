@@ -7,7 +7,6 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as Location from 'expo-location';
 
 import CardHome from "./Card";
-import {MdLocationOn as LocationIcon} from 'react-icons/md';
 
 interface ICoordsData{
     latitude: number;
@@ -88,16 +87,16 @@ export default function Map(){
                     }}
                 >
                     <Marker coordinate={{ latitude : coords.latitude , longitude : coords.longitude }}>
-                        <LocationIcon fontSize={50} color="#FFB600" />
+                        <Icon name="location-pin" color="#CA5501" style={{fontSize:50}} />
                     </Marker>
                 </MapView> 
 
             }
             <View style={styles.contentView}>
-                <Searchbar
+                <Searchbar/>
+
                 
 
-                />
                 <View>
                     <CardHome modalActive={modalActive} />
                 
